@@ -1,0 +1,10 @@
+name_of_reinsurer,due_date,status,amount,is_late
+A,February 14,In Dispute,5,yes
+A,March 17,Paid,4,no
+A,September 1,Unpaid,6,yes
+A,October 30,Paid,7,no
+A,December 25,Unpaid,9,no
+B,April I,Unpaid,8,yes
+B,July 4,In Dispute,15,yes
+B,October 31,Unpaid,10,no
+B,December 24,Unpaid,12,no
