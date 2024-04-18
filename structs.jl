@@ -1,8 +1,9 @@
 mutable struct Card
     question::AbstractString
     answer::AbstractString
-    probability::Float64
+    views::Int64
 end
+Card(question, answer) = Card(question, answer, 0)
 
 mutable struct Deck
     cards::Vector{Card}

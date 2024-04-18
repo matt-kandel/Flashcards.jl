@@ -9,12 +9,11 @@ for section in readdir("./decks")
     for card in cards
         question = match(r"^[^\*]*(?=\r\n)", card).match
         answer = join((x -> x.match).(eachmatch(r"\*.*", card)), "\n")
-        push!(deck.cards, Card(question, answer, 1))
+        push!(deck.cards, Card(question, answer))
     end
 end
 
 while length(deck.cards) > 0
-    rebase!(deck)
     card = pick_a_card!(deck)
     clear_screen()
     println(card.question)
@@ -24,27 +23,27 @@ while length(deck.cards) > 0
     println("Did you get it right? (y/n)")
 
     response = readline()
-    continue_guessing = true
-    while continue_guessing
+    is_valid_input = false
+    while !is_valid_input
         if response == "n"
-            continue_guessing = false
+            is_valid_input = true
             println("Putting card back into the deck")
-            if length(deck.cards) > 0
-                # You've just seen this card, so make it less likely
-                card.probability = 1 / length(deck.cards) / 5
-            end
+            card.views += 1
             push!(deck.cards, card)
             readline()
         elseif response == "y"
-            continue_guessing = false
+            is_valid_input = true
             if length(deck.cards) > 0
                 println("Great! Press any key for next flashcard")
                 readline()
             elseif length(deck.cards) == 0
                 println("Congrats! You've finished the deck :)")
+                println("Press any key to close")
+                readline()
             end
         else
             println("$response is invalid input (must be y or n)")
+            println("Did you get it right? (y/n)")
             response = readline()
         end        
     end

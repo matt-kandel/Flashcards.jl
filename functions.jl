@@ -1,19 +1,11 @@
-using StatsBase
-
-# Normalize a Deck so that all card probabilities add to 1
-function rebase!(deck::Deck)
-    factor = sum(card.probability for card in deck.cards)
-    for card in deck.cards
-        card.probability /= factor
-    end
-    if round(sum(card.probability for card in deck.cards), digits=5) != 1
-        error("Check normalization calculation (sum of probabilities != 1)")
-    end
-end
-
-# Take a card from the deck, and modify the deck to remove that card
 function pick_a_card!(deck::Deck)
-    card = sample(deck.cards, Weights([c.probability for c in deck.cards]))
+    # The minimum views ensures that you don't see a card again until you've
+    # gone through the rest of the deck
+    min_views = minimum(card.views for card in deck.cards)
+    min_views_deck = filter((c -> c.views == min_views), deck.cards)
+    # pick a card
+    card = rand(min_views_deck)
+    # remove the card from the deck
     deck.cards = filter((c -> c != card), deck.cards)
     return card
 end
