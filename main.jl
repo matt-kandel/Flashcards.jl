@@ -7,7 +7,13 @@ deck = Deck([])
 for section in readdir("./decks")
     cards = split(read("./decks/$section", String), "\r\n\r\n")
     for card in cards
-        question = match(r"^[^\*]*(?=\r\n)", card).match
+        question_regex = match(r"^[^\*]*(?=\r\n)", card)
+        if !isnothing(question_regex)
+            question = question_regex.match
+        else
+            println("Check $section for improperly formatted flashcard(s)")
+            readline()
+        end
         answer = join((x -> x.match).(eachmatch(r"\*.*", card)), "\n")
         push!(deck.cards, Card(question, answer))
     end
@@ -16,9 +22,9 @@ end
 while length(deck.cards) > 0
     card = pick_a_card!(deck)
     clear_screen()
-    println(card.question)
+    printstyled("$(card.question)\n", color=:light_cyan)
     readline()
-    println(card.answer)
+    printstyled("$(card.answer)\n", color=:yellow)
     readline()
     println("Did you get it right? (y/n)")
 
@@ -34,17 +40,18 @@ while length(deck.cards) > 0
         elseif response == "y"
             is_valid_input = true
             if length(deck.cards) > 0
-                println("Great! Press any key for next flashcard")
+                printstyled("Great! :)\n Press any key for next flashcard\n",
+                    color=:light_green)
                 readline()
             elseif length(deck.cards) == 0
-                println("Congrats! You've finished the deck :)")
-                println("Press any key to close")
+                printstyled("Congrats, you've finished the deck! :)
+                    \nPress enter to close", color=:light_green)
                 readline()
             end
         else
             println("$response is invalid input (must be y or n)")
             println("Did you get it right? (y/n)")
             response = readline()
-        end        
+        end
     end
 end
