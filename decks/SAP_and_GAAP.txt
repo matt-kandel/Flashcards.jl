@@ -1,2 +1,12 @@
-What is SAP?
-* Accounting standard
+List five things that SAP and GAAP value differently
+* Deferred acquisition costs (DAC) - GAAP recognizes, SAP pays acquisition costs immediately
+* Premium deficiency reserves (PDR) - ?
+* Nonadmitted assets - Exist in SAP, don't exist in GAAP
+* Deferred tax assets (DTAs) - Exist in GAAP, don't exist in SAP
+* Invested assets
+* Balance sheet presentation of reinsurance
+* Ceded reinsurance - prospective and Retroactive
+* Structured settlements
+* Anticipated salvage & subrogation
+* Discounting of loss reserves
+* Goodwill

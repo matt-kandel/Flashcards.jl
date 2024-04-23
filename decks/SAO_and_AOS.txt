@@ -5,4 +5,21 @@ What are the four sections of the SAO?
 * Relevant comments
 
 Name one common materiality standard
-* 10 to 
+* 10% to 20% of surplus
+* 10% of reserves
+* 10% of net income
+* Reduction in surplus to trigger RBC Action Level
+
+What is in Exhibit A of the SAO?
+* Loss reserves (net and direct & assumed)
+* LAE reserves (net and direct & assumed)
+* Retroactive reinsuranc reserves assumed
+* Other reserves
+* Unearned premium reserves
+
+Name five kinds of opinions you can give in the SAO
+* Reasonable
+* Excessive
+* Deficient
+* Qualified (possibly in the reasonable range, possibly not)
+* No opinion (when you have no idea)

@@ -1,0 +1,52 @@
+Describe Paul vs. Virginia
+* Decided in 1869
+* Paul (lived in Virginia) arrested and fined for selling policies from New York insurers in Virginia
+* Supreme Court decided that insurance is not Interstate Commerce
+* Insurance regulation falls to the states
+
+Describe US vs. South-Eastern Underwriters Association (SEUA)
+* In 1944, states were beginning to repeal their antitrust laws
+* The SEUA was colluding to control 90% of fire & allied lines market
+* Fixing premium rates and agents' commissions
+* SEUA used boycotts, coercion, and intimidation on their competitors and consumers
+* Supreme Court said that insurance is interstate commmerce and therefore subject to federal law (especially Sherman Antitrust)
+
+Briefly describe the history of federal antitrust law and how it applies to insurance
+* Sherman Antitrust Act in 1890 does not apply to insurance (still state level under Paul vs. Virginia)
+* But signalled to state regulators the direction the country was going in, and many states followed suit
+* Banned different kinds of market abuses throughout industry (compacts/fixing rates)
+
+Name two things that the Clayton Act (1914) made illegal
+* Price discrimination (Clayton amended by Robinson-Patman Act)
+* Tying - requiring purchase of one product to purchase another
+
+Describe the McCarran-Ferguson Act and the circumstances of its enactment
+* In 1945, insurers were annoyed at the US vs. SEUA decision because they preferred state-level regulation
+* McCarran-Ferguson Act essentially gave the insurance industry what they wanted
+* Federal government can still enforce ntitrust stuff (Boycott, coercion, intimidation) under Sherman Act
+* If Congress passes a law specifically for the insurance industry, it supercedes state laws
+
+Describe the Gramm-Leach-Bliley Act and the circumstances of its enactment
+* Affiliation between banks (federally regulated) and insurers (state regulated) caused confusion
+* Banks can't sell insurance, and also can't create subsidiaries to sell insurance
+* Banks can use financial holding companies to create insurer affiliates, so it's hard for them to use insurer assets to meet operational needs
+* Banks also need to disclose information-sharing policies to mitigate the consumer privacy risk
+* Prompted NAIC Producer Model Act to standardize licensing and standards across states, and ensure rates were not "inadequate, excessive, or discriminatory"
+
+Name two types of insurers that can be regulated under Dodd-Frank
+* Systematically important financial institutions
+* Insurance holding companies that own banks
+
+What is the purpose of the Federal Insurance Office (FIO)
+* Analyze and report industry data
+* Monitor systemic risks in insurance industry
+* Monitor affordability and availability of insurance
+* Represent the US insurance industry internationally
+* Develop federal policy regarding nationally or internationally important insurance issues
+* Report to Congress annually
+* To help the Secretary of the Treasury administer the Terrorism Insurance Program
+
+Name three ways that insurance companies are regulated by the state
+* Financial (Solvency, investments)
+* Market conduct (sales, underwriting, claims)
+* Licensing

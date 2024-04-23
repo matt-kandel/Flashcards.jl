@@ -1,0 +1,20 @@
+What's in Schedules A, B, BA, D, DA, DB, DL, E, T, and Y?
+* A => Real estate
+* B => Mortgage loans 
+* BA => Other long-term inveseted assets 
+* D => Bonds
+* DA => Short-term investments 
+* DB => Misc. financial instruments (options, caps, floors, futures, etc.) 
+* DL => Securities lending collateral assets
+* E => Cash & cash equivalents
+* T => Premiums by state
+* Y => Org chart
+
+What's the test in the AOS?
+* sum(adverse development .> 5%) >= 3 for the last five years
+
+How do regulators, stakeholders, investors, and actuaries use the Income Expense Exhibit (IEE)
+* Regulators => Monitor financial health & solvency, and make sure rates are appropriate
+* Stakeholders => Identify which lines are profitable, where to deploy capital
+* Investors => Is this company expanding into profitable lines and withdrawing from unprofitable ones?
+* Actuaries => Publicly available source of premium, loss, expenses by line

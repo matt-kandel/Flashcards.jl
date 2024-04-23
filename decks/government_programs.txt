@@ -1,3 +1,7 @@
 What does the federal government do in crop insurance and why?
 * Insures crop, multi-peril, hail
 * Because the government would rather administer an insurance program than use FEMA disaster relief funds
+
+What's the difference between a Direct Servicing Agent (DSA) and a Write-Your-Own (WYO) Program for the NFIP
+* DSA is private contractor for FEMA
+* WYO is written privately, but with 100% government reinsurance and reimburses administration expenses
