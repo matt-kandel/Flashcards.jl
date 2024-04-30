@@ -1,0 +1,137 @@
+"""
+IRIS 1: Gross written premium to policyholder surplus
+"""
+function iris_1(direct_written_premium, assumed_reinsurance, policyholder_surplus)
+*     (direct_written_premium + assumed_reinsurance) / policyholder_surplus
+* end
+* Normal range: <= 900%
+
+
+"""
+IRIS 2: Net written premium to policyholder surplus
+"""
+function iris_2(net_written_premium, policyholder_surplus)
+*     net_written_premium / policyholder_surplus
+* end
+* Normal range: <= 300%
+
+"""
+IRIS 3: Change in net written premium
+"""
+function iris_3(net_written_premium₀, net_written_premium₋₁)
+*     (net_written_premium₀ - net_written_premium₋₁) / net_written_premium₋₁
+* end   
+* Normal range: -33% to 33%
+
+"""
+IRIS 4: Surplus aid to policyholder surplus
+ceded_reinsurance_premiums includes affiliates and non-affiliates
+unearned_premiums includes authorized, unauthorized, foreign, domestic, etc.
+"""
+function iris_4(ceded_commissions, ceded_contingent_commissions,
+    ceded_reinsurance_premiums, unearned_premiums, policyholder_surplus)
+*     surplus_aid = (
+*         (ceded_commissions + ceded_contingent_commissions) * unearned_premiums
+*         / ceded_reinsurance_premiums
+*     )
+*     surplus_aid / policyholder_surplus
+* end
+* Normal range: < 15%
+
+"""
+IRIS 5: Two year operating ratio
+Every variable in IRIS 5 is current year + prior year
+"""
+function iris_5(loss_and_lae, policyholder_dividends, earned_premium,
+    other_underwriting_expenses, other_income, written_premium, investment_income) 
+*     loss_ratio = (loss_and_lae + policyholder_dividends) / earned_premium
+*     expense_ratio = (other_underwriting_expenses - other_income) / written_premium
+*     income_ratio = investment_income / earned_premium
+* 
+*     loss_ratio + expense_ratio - income_ratio
+* end
+* Normal range: < 100%
+
+"""
+IRIS 6: Investment yield
+This ratio measures two year (current + prior) investment yield
+"""
+function iris_6(net_investment_income_earned, cash, two_year_invested_assets,
+    two_year_invested_income_due_and_accrued, two_year_borrowed_money)
+*     2 * net_investment_income_earned /
+*     (cash + two_year_invested_assets + two_year_invested_income_due_and_accrued
+*         - two_year_borrowed_money - net_investment_income_earned)
+* end
+* Normal range: 2% to 5.5%
+
+"""
+IRIS 7: Gross change in policyholder surplus
+"""
+function iris_7(policyholder_surplus₀, policyholder_surplus₋₁)
+*     (policyholder_surplus₀ - policyholder_surplus₋₁) / policyholder_surplus₋₁
+* end
+* Normal range: -10% to 50% 
+
+"""
+IRIS 8: Change in adjusted policyholder surplus
+"""
+function iris_8(policyholder_surplus₀, policyholder_surplus₋₁, change_in_surplus_notes,
+    capital_paid_or_transferred, surplus_paid_or_transferred)
+*     (policyholder_surplus₀ - change_in_surplus_notes - capital_paid_or_transferred - surplus_paid_or_transferred - policyholder_surplus₋₁) / abs(policyholder_surplus₋₁)
+* end
+* Normal range: -10% to 25%
+
+"""
+IRIS 9: Adjusted liabilities to liquid assets
+cash_equivalents includes short term invesetments
+investments_in_affiliates includes parents & subsidiaries as well
+"""
+function iris_9(total_liabilities, deferred_agents_balances, bonds, stocks,
+    cash, cash_equivalents, receivables_for_securities,
+    investment_income_due_and_accrued, investments_in_affiliates)
+*     adjusted_liabilities = total_liabilities - deferred_agents_balances
+*     liquid_assets = bonds + stocks + cash + cash_equivalents + receivables_for_securities + investment_income_due_and_accrued - investments_in_affiliates 
+*     adjusted_liabilities / liquid_assets
+* end
+* Normal range: < 100%
+
+"""
+IRIS 10: Gross agents balances to policyholder surplus
+"""
+function iris_10(gross_agents_balances_in_collection, policyholder_surplus)
+*     gross_agents_balances_in_collection / policyholder_surplus
+* end
+* Normal range: < 40%
+
+"""
+IRIS 11: One year loss reserve development
+"""
+function iris_11(one_year_reserve_development, policyholder_surplus₋₁)
+*     one_year_reserve_development / policyholder_surplus₋₁
+* end
+* Normal range: < 20%
+
+"""
+IRIS 12: Two year loss reserve development
+"""
+function iris_12(two_year_reserve_development, policyholder_surplus)
+*     two_year_reserve_development / policyholder_surplus
+* end
+* Normal range: < 20%
+
+"""
+IRIS 13: Estimated current reserve deficiency to policyholder surplus
+loss_reserves includes LAE
+"""
+function iris_13(loss_reserves₋₂, loss_reserves₋₁, loss_reserves₀, 
+    earned_premium₋₂, earned_premium₋₁, earned_premium₀,
+    loss_reserve_development₋₂, loss_reserve_development₋₁,
+    policyholder_surplus)
+*     developed_reserves_to_premium_ratio₋₂ = (loss_reserves₋₂ + loss_reserve_development₋₂) / earned_premium₋₂ 
+*     developed_reserves_to_premium_ratio₋₁ = (loss_reserves₋₁ + loss_reserve_development₋₁) / earned_premium₋₁ 
+* 
+*     estimated_loss_reserve_deficiency = earned_premium₀ * (developed_reserves_to_premium_ratio₋₂ + developed_reserves_to_premium_ratio₋₁) / 2 - loss_reserves₀
+* 
+*     estimated_loss_reserve_deficiency / policyholder_surplus
+* end
+* Normal range: < 25%

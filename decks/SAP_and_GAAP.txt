@@ -10,3 +10,15 @@ List five things that SAP and GAAP value differently
 * Anticipated salvage & subrogation
 * Discounting of loss reserves
 * Goodwill
+
+What valuation does SAP use for bonds and stocks?
+* Bonds - NAIC Classes 1 & 2 - Amortized cost
+* Bonds - NAIC Class >= 3 - min(Amortized cost, fair value)
+* Common stock - fair value
+
+Identify three required elements of an ORSA under Solvency II
+* Operational risk
+* Catastrophe risk
+* Interest rate risk
+* Assessment of reserve adequacy
+* Governance

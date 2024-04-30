@@ -1,0 +1,10 @@
+Describe an Assigned Risk Plan
+* Normal market rejects driver
+* All insurers are given a share of high-risk drivers based on market share in state
+
+Describe a Joint Underwriting Association (JUA)
+* Normal market rejects driver, agent/broker forwards application to JUA
+* JUA is basically a pool of high-risk drivers
+
+Reinsurance Facility (write later)
+* ???

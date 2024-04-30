@@ -23,3 +23,6 @@ Name five kinds of opinions you can give in the SAO
 * Deficient
 * Qualified (possibly in the reasonable range, possibly not)
 * No opinion (when you have no idea)
+
+What's the test in the AOS?
+* sum(adverse development .> 5%) >= 3 for the last five years
