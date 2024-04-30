@@ -5,9 +5,6 @@ Everything runs in the command line. There's no fancy Spaced Repetition algorith
 
 The decks are study materials for Exam 6. If you want to add new cards or decks, the format is:
 
-Question
-* Answer 1
-* Answer 2
-* Answer 3
+Question<br>* Answer 1<br>* Answer 2<br>* Answer 3
 
 Where any lines that begin with * will be parsed as part of the answer.
